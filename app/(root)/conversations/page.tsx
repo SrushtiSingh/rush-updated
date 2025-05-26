@@ -2,7 +2,7 @@ import React from 'react';
 
 type Props = object;
 
-const ConversationsPage = (props: Props) => {
+const ConversationsPage = () => {
   return (
     <div>ConversationsPage</div>
   );
