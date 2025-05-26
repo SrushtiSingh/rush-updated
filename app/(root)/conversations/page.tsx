@@ -1,15 +1,11 @@
-import React from "react";
-import { Id } from "@/convex/_generated/dataModel";
+import React from 'react';
 
-type Props = {
-  params: {
-    conversationId: Id<"conversations">;
-  };
-};
+type Props = {};
 
-const ConversationsPage = ({ params }: Props) => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const ConversationsPage = (props: Props) => {
   return (
-    <div>Conversation ID: {params.conversationId}</div>
+    <div>ConversationsPage</div>
   );
 };
 
