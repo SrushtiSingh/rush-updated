@@ -1,6 +1,5 @@
 "use client";
 
-import React, { use } from "react";
 import { Card } from "../../card";
 import { cn } from "@/lib/utils";
 import { useConversation } from "@/hooks/useConversation";

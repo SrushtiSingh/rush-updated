@@ -1,13 +1,15 @@
 "use client";
 
-import React from "react";
+import { ReactNode } from "react";
 import ItemList from "@/components/ui/shared/item-list/ItemList";
 import { api } from "@/convex/_generated/api";
 import { useQuery } from "convex/react";
 import { Loader2 } from "lucide-react";
 import DMConversationItem from "./_components/DMConversationItem";
 
-type Props = React.PropsWithChildren<{}>;
+type Props = {
+  children: ReactNode;
+};
 
 const ConversationsLayout = ({ children }: Props) => {
   const conversations = useQuery(api.conversations.getAll);

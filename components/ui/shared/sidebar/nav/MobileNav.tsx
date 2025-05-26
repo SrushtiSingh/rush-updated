@@ -10,9 +10,9 @@ import {
 import { ThemeToggle } from "@/components/ui/ui/theme/theme-toggle";
 import { useConversation } from "@/hooks/useConversation";
 import { useNavigation } from "@/hooks/useNavigation";
-import { UserButton } from "@clerk/nextjs";
+
 import { Badge, Link } from "lucide-react";
-import path from "path";
+
 
 const MobileNav = () => {
   const paths = useNavigation();

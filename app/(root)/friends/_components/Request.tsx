@@ -3,13 +3,10 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card } from "@/components/ui/card";
 import { Id } from "@/convex/_generated/dataModel";
 import { useMutationState } from "@/hooks/useMutationState";
-import { useMutation } from "convex/react";
 import { Check, User, X } from "lucide-react";
 import React from "react";
 import { api } from "@/convex/_generated/api";
-import { deny } from "@/convex/request";
 import { toast } from "sonner";
-import { error } from "console";
 import { ConvexError } from "convex/values";
 type Props = {
   id: Id<"requests">;
@@ -19,12 +16,10 @@ type Props = {
 };
 
 const Request = ({ id, imageUrl, username, email }: Props) => {
-    const { mutate: denyRequest, pending:
-        denyPending } = useMutationState(
+    const { mutate: denyRequest} = useMutationState(
             api.request.deny
         );
-        const { mutate: acceptRequest, pending:
-            acceptPending } = useMutationState(
+        const { mutate: acceptRequest } = useMutationState(
                 api.request.accept
             );    
   return (

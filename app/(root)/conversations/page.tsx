@@ -1,11 +1,11 @@
 import React from 'react';
 
-type Props = {};
+type Props = object;
 
 const ConversationsPage = (props: Props) => {
-  return 
-    <div>ConversationsPage</div>;
-
+  return (
+    <div>ConversationsPage</div>
+  );
 };
 
 export default ConversationsPage;

@@ -1,13 +1,9 @@
 import SidebarWrapper from '@/components/ui/shared/sidebar/SidebarWrapper';
-import { Sidebar } from 'lucide-react';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
-type Props = React.
-PropsWithChildren<{}>;
+type Props = PropsWithChildren<object>;
 
-
-const layout = ({children }
-: Props) => {
+const layout = ({ children }: Props) => {
   return <SidebarWrapper>{children}</SidebarWrapper>;
 };
 

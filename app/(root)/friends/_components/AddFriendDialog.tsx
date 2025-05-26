@@ -9,11 +9,9 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
 import { UserPlus } from "lucide-react";
 import { useMutationState } from "@/hooks/useMutationState";
 import { api } from "@/convex/_generated/api";
-import { error } from "console";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { create } from "domain";
 import { toast } from "sonner";
 import { ConvexError } from "convex/values";
 
@@ -25,8 +23,7 @@ const addFriendFormSchema = z.object({
 });
 
 const AddFriendDialog = () => {
-    const {mutate: createRequest, pending} =
-    useMutationState(api.request.create);
+    const { mutate: createRequest } = useMutationState(api.request.create);
 
     const form = useForm<z.infer<typeof addFriendFormSchema>>({
         resolver: zodResolver
@@ -35,7 +32,7 @@ const AddFriendDialog = () => {
             email: "",
         },
     });
-
+    
     const handleSubmit = async (values: z.
         infer<typeof addFriendFormSchema>) => {
             await createRequest({ email: values.email})
